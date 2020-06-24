@@ -15,13 +15,14 @@ void Log(const char* mensagem); //Repare que o retorno é 'int' e o nome da func
 // e sendo assim, se não chamarmos 'Multiplicar()' na main, logo nunca chamaremos a 'Log()',
 // e por tanto, nunca ocorre-ra o erro de Linking com o método 'Logr()' por ter nome diferente.
 static int Multiplicar(int a, int b) {
-    Log("Multiplicar");
+    //Log("Multiplicar");   //Descomentando esta linha, e coment a prox, veras os erros de Linking
+    Logr("Multiplicar");
     return a * b;
 }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    //std::cout << Multiplicar(5, 8);   //Descomentando esta linha veras os erros de Linking
+    std::cout << Multiplicar(5, 8);
     std::cin.get();
     return 0;
 }
